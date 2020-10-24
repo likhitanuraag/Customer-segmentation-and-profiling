@@ -1,0 +1,51 @@
+*------------------------------------------------------------*
+User:                20161277
+Date:                September 24, 2020
+Time:                11:17:29
+*------------------------------------------------------------*
+* Training Output
+*------------------------------------------------------------*
+ 
+ 
+ 
+ 
+Variable Summary
+ 
+            Measurement    Frequency
+Role           Level         Count
+ 
+INPUT        INTERVAL          1
+INPUT        NOMINAL           3
+REJECTED     INTERVAL          1
+REJECTED     NOMINAL           4
+TARGET       NOMINAL           1
+
+
+*------------------------------------------------------------*
+* Score Output
+*------------------------------------------------------------*
+ 
+ 
+ 
+Excluded Class Values
+(maximum 500 observations printed)
+ 
+                                      Train     Train              Filter
+ Variable      Role     Level         Count    Percent    Label    Method
+ 
+Subscribed    TARGET     yes           4258    11.1335             MANUAL
+ 
+ 
+ 
+ 
+Number Of Observations
+ 
+Data
+Role     Filtered    Excluded     DATA
+ 
+TRAIN      33987       4258      38245
+
+
+*------------------------------------------------------------*
+* Report Output
+*------------------------------------------------------------*

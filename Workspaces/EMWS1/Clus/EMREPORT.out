@@ -1,0 +1,12 @@
+ 
+                                                                                                                                                                                                                                                                
+ 
+ 
+Variable Importance
+
+                               Number of    Number of
+                               Splitting    Surrogate
+Variable Name         Label      Rules        Rules      Importance
+
+Contact_Type                       1            0          1.00000 
+Number_of_Contacts                 5            1          0.98222 

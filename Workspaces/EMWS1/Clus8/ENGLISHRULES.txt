@@ -1,0 +1,67 @@
+*------------------------------------------------------------*
+ Node = 4
+*------------------------------------------------------------*
+if Number_of_Contacts < 6.5 or MISSING
+AND Contact_Type IS ONE OF: CELLULAR or MISSING
+then 
+ Tree Node Identifier   = 4
+ Number of Observations = 23292
+ Predicted: _SEGMENT_=3  = 0.00
+ Predicted: _SEGMENT_=2  = 0.00
+ Predicted: _SEGMENT_=5  = 0.00
+ Predicted: _SEGMENT_=1  = 0.00
+ Predicted: _SEGMENT_=4  = 1.00
+ 
+*------------------------------------------------------------*
+ Node = 5
+*------------------------------------------------------------*
+if Number_of_Contacts < 6.5 or MISSING
+AND Contact_Type IS ONE OF: TELEPHONE
+then 
+ Tree Node Identifier   = 5
+ Number of Observations = 12733
+ Predicted: _SEGMENT_=3  = 1.00
+ Predicted: _SEGMENT_=2  = 0.00
+ Predicted: _SEGMENT_=5  = 0.00
+ Predicted: _SEGMENT_=1  = 0.00
+ Predicted: _SEGMENT_=4  = 0.00
+ 
+*------------------------------------------------------------*
+ Node = 7
+*------------------------------------------------------------*
+if Number_of_Contacts >= 26.5
+then 
+ Tree Node Identifier   = 7
+ Number of Observations = 67
+ Predicted: _SEGMENT_=3  = 0.00
+ Predicted: _SEGMENT_=2  = 0.00
+ Predicted: _SEGMENT_=5  = 0.00
+ Predicted: _SEGMENT_=1  = 1.00
+ Predicted: _SEGMENT_=4  = 0.00
+ 
+*------------------------------------------------------------*
+ Node = 8
+*------------------------------------------------------------*
+if Number_of_Contacts < 14.5 AND Number_of_Contacts >= 6.5 or MISSING
+then 
+ Tree Node Identifier   = 8
+ Number of Observations = 1842
+ Predicted: _SEGMENT_=3  = 0.00
+ Predicted: _SEGMENT_=2  = 1.00
+ Predicted: _SEGMENT_=5  = 0.00
+ Predicted: _SEGMENT_=1  = 0.00
+ Predicted: _SEGMENT_=4  = 0.00
+ 
+*------------------------------------------------------------*
+ Node = 9
+*------------------------------------------------------------*
+if Number_of_Contacts < 26.5 AND Number_of_Contacts >= 14.5
+then 
+ Tree Node Identifier   = 9
+ Number of Observations = 311
+ Predicted: _SEGMENT_=3  = 0.00
+ Predicted: _SEGMENT_=2  = 0.04
+ Predicted: _SEGMENT_=5  = 0.96
+ Predicted: _SEGMENT_=1  = 0.00
+ Predicted: _SEGMENT_=4  = 0.00
+ 

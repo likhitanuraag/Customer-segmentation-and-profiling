@@ -1,0 +1,14 @@
+ 
+                                                                                                                                                                                                                                                                
+ 
+ 
+Variable Importance
+
+                            Number of    Number of
+                            Splitting    Surrogate
+Variable Name      Label      Rules        Rules      Importance
+
+Age                             5            2          1.00000 
+Career                          1            6          0.80385 
+Marital_Statues                 2            0          0.80121 
+Education                       2            1          0.54658 

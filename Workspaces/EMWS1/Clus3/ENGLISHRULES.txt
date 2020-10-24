@@ -1,0 +1,118 @@
+*------------------------------------------------------------*
+ Node = 5
+*------------------------------------------------------------*
+if Marital_Statues IS ONE OF: DIVORCED, MARRIED or MISSING
+AND Age >= 54.5
+then 
+ Tree Node Identifier   = 5
+ Number of Observations = 673
+ Predicted: _SEGMENT_=4  = 0.00
+ Predicted: _SEGMENT_=2  = 0.00
+ Predicted: _SEGMENT_=5  = 1.00
+ Predicted: _SEGMENT_=3  = 0.00
+ Predicted: _SEGMENT_=1  = 0.00
+ 
+*------------------------------------------------------------*
+ Node = 6
+*------------------------------------------------------------*
+if Marital_Statues IS ONE OF: SINGLE
+AND Age < 54.5 or MISSING
+then 
+ Tree Node Identifier   = 6
+ Number of Observations = 1444
+ Predicted: _SEGMENT_=4  = 0.00
+ Predicted: _SEGMENT_=2  = 1.00
+ Predicted: _SEGMENT_=5  = 0.00
+ Predicted: _SEGMENT_=3  = 0.00
+ Predicted: _SEGMENT_=1  = 0.00
+ 
+*------------------------------------------------------------*
+ Node = 7
+*------------------------------------------------------------*
+if Marital_Statues IS ONE OF: SINGLE
+AND Age >= 54.5
+then 
+ Tree Node Identifier   = 7
+ Number of Observations = 25
+ Predicted: _SEGMENT_=4  = 0.00
+ Predicted: _SEGMENT_=2  = 0.00
+ Predicted: _SEGMENT_=5  = 1.00
+ Predicted: _SEGMENT_=3  = 0.00
+ Predicted: _SEGMENT_=1  = 0.00
+ 
+*------------------------------------------------------------*
+ Node = 8
+*------------------------------------------------------------*
+if Marital_Statues IS ONE OF: DIVORCED, MARRIED or MISSING
+AND Age < 49.5 or MISSING
+then 
+ Tree Node Identifier   = 8
+ Number of Observations = 1794
+ Predicted: _SEGMENT_=4  = 1.00
+ Predicted: _SEGMENT_=2  = 0.00
+ Predicted: _SEGMENT_=5  = 0.00
+ Predicted: _SEGMENT_=3  = 0.00
+ Predicted: _SEGMENT_=1  = 0.00
+ 
+*------------------------------------------------------------*
+ Node = 14
+*------------------------------------------------------------*
+if Marital_Statues IS ONE OF: DIVORCED, MARRIED or MISSING
+AND Education IS ONE OF: PRIMARY EDUCATION or MISSING
+AND Age < 54.5 AND Age >= 49.5
+then 
+ Tree Node Identifier   = 14
+ Number of Observations = 61
+ Predicted: _SEGMENT_=4  = 0.00
+ Predicted: _SEGMENT_=2  = 0.00
+ Predicted: _SEGMENT_=5  = 1.00
+ Predicted: _SEGMENT_=3  = 0.00
+ Predicted: _SEGMENT_=1  = 0.00
+ 
+*------------------------------------------------------------*
+ Node = 18
+*------------------------------------------------------------*
+if Marital_Statues IS ONE OF: DIVORCED
+AND Education IS ONE OF: UNIVERSITY EDUCATION, SECONDARY EDUCATION, PROFESSIONAL EDUCATION
+AND Age < 54.5 AND Age >= 49.5
+then 
+ Tree Node Identifier   = 18
+ Number of Observations = 50
+ Predicted: _SEGMENT_=4  = 0.00
+ Predicted: _SEGMENT_=2  = 0.00
+ Predicted: _SEGMENT_=5  = 1.00
+ Predicted: _SEGMENT_=3  = 0.00
+ Predicted: _SEGMENT_=1  = 0.00
+ 
+*------------------------------------------------------------*
+ Node = 20
+*------------------------------------------------------------*
+if Marital_Statues IS ONE OF: MARRIED or MISSING
+AND Education IS ONE OF: UNIVERSITY EDUCATION, SECONDARY EDUCATION, PROFESSIONAL EDUCATION
+AND Career IS ONE OF: BLUE-COLLAR, ENTREPRENEUR, TECHNICIAN, SERVICES, MANAGEMENT, ADMINISTRATION, UNEMPLOYED, SELF-EMPLOYED
+AND Age < 54.5 AND Age >= 49.5
+then 
+ Tree Node Identifier   = 20
+ Number of Observations = 204
+ Predicted: _SEGMENT_=4  = 0.97
+ Predicted: _SEGMENT_=2  = 0.00
+ Predicted: _SEGMENT_=5  = 0.02
+ Predicted: _SEGMENT_=3  = 0.00
+ Predicted: _SEGMENT_=1  = 0.00
+ 
+*------------------------------------------------------------*
+ Node = 21
+*------------------------------------------------------------*
+if Marital_Statues IS ONE OF: MARRIED or MISSING
+AND Education IS ONE OF: UNIVERSITY EDUCATION, SECONDARY EDUCATION, PROFESSIONAL EDUCATION
+AND Career equals Missing
+AND Age < 54.5 AND Age >= 49.5
+then 
+ Tree Node Identifier   = 21
+ Number of Observations = 7
+ Predicted: _SEGMENT_=4  = 0.14
+ Predicted: _SEGMENT_=2  = 0.00
+ Predicted: _SEGMENT_=5  = 0.86
+ Predicted: _SEGMENT_=3  = 0.00
+ Predicted: _SEGMENT_=1  = 0.00
+ 

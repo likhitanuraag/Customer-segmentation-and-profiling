@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?><_ROOT_  Location="CATALOG" Catalog="SASHELP.EMSAMP.Fimport.SOURCE" ImportType="Local" GuessRows="500"
+ Delimiter="," NameRow="Y" SkipRows="0" MaxRows="1000000" MaxCols="10000" FileType="csv"
+ Role="TRAIN" ForceRun="N" Summarize="N" AdvancedAdvisor="N" RunAction="Train" Component="FileImport"
+ IFileName="C:\Users\20161277\Documents\CA assign 2 data\bank_data_edit.csv" AccessTable="NoTableName"
+ UserID="NoUserID" Password="NoPassword" RawCreateTime="1916475428.1" CreateTime="23SEP2020:10:17:08"
+ RunId="7ff141bc-585b-49e9-8d94-0f578d4b4b2b" RawLastTimeRun="1916660513.9" RawRunTime="6.4339997768"
+ LastTimeRun="25SEP2020:13:41:54" RunTime="0 Hr. 0 Min. 6.43 Sec.">
+<VARIABLEPROPERTIES/>
+<FILEPROPERTIES ><![CDATA[
+USERTRAINCODE
+USERSCORECODE
+USERREPORTCODE
+VARIABLESETDELTA
+DELTACODE
+]]>
+</FILEPROPERTIES></_ROOT_>

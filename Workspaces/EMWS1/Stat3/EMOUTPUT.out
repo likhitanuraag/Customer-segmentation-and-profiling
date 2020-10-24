@@ -1,0 +1,66 @@
+*------------------------------------------------------------*
+User:                20161277
+Date:                September 23, 2020
+Time:                12:10:21
+*------------------------------------------------------------*
+* Training Output
+*------------------------------------------------------------*
+ 
+ 
+ 
+ 
+Variable Summary
+ 
+            Measurement    Frequency
+Role           Level         Count
+ 
+INPUT        INTERVAL          1
+INPUT        NOMINAL           3
+REJECTED     INTERVAL          1
+REJECTED     NOMINAL           3
+TARGET       NOMINAL           1
+ 
+ 
+ 
+Variable Levels Summary
+(maximum 500 observations printed)
+ 
+                        Frequency
+ Variable      Role       Count
+ 
+Subscribed    TARGET        1
+ 
+ 
+ 
+Class Variable Summary Statistics
+(maximum 500 observations printed)
+ 
+Data Role=TRAIN
+ 
+                                 Number
+Data      Variable                 of                            Mode                  Mode2
+Role        Name        Role     Levels    Missing    Mode    Percentage    Mode2    Percentage
+ 
+TRAIN    Subscribed    TARGET       1         0       yes       100.0                   0.00
+ 
+ 
+ 
+Distribution of Class Target and Segment Variables
+(maximum 500 observations printed)
+ 
+Data Role=TRAIN
+ 
+Data      Variable                         Frequency
+Role        Name        Role     Level         Count    Percent
+ 
+TRAIN    Subscribed    TARGET     yes           4258      100
+
+
+*------------------------------------------------------------*
+* Score Output
+*------------------------------------------------------------*
+
+
+*------------------------------------------------------------*
+* Report Output
+*------------------------------------------------------------*

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?><_ROOT_  Location="CATALOG" Catalog="SASHELP.EMUTIL.SAVEXT.SOURCE" Type="CSV" Replace="Y"
+ AllObs="Y" OutObs="1000" AllRoles="Y" Train="Y" Validate="Y" Test="Y" Score="Y" Transaction="Y"
+ ForceRun="N" RunAction="Train" Component="EMSave" Lib="" DirectorySelector="C:\Users\20161277\Documents\CA assign 2 data\outputTask1"
+ Name="" RawCreateTime="1916833455.5" CreateTime="27SEP2020:13:44:16" RunId="b1966c70-4c05-4319-8dbe-cb8593ebd61f"
+>
+<VARIABLEPROPERTIES/>
+<FILEPROPERTIES ><![CDATA[
+USERTRAINCODE
+USERSCORECODE
+USERREPORTCODE
+EMNOTES
+]]>
+</FILEPROPERTIES><EMTARGETATTRIBUTES/>
+</_ROOT_>

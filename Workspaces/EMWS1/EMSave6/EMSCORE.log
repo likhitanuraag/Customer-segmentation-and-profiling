@@ -1,0 +1,72 @@
+*------------------------------------------------------------*
+* Score Log
+Date:                September 27, 2020
+Time:                13:56:20
+*------------------------------------------------------------*
+15953  %let EMEXCEPTIONSTRING=;
+15954  *------------------------------------------------------------*;
+15955  * SCORE: EMSave6;
+15956  *------------------------------------------------------------*;
+15957  %let EM_ACTION = SCORE;
+15958  %let syscc = 0;
+15959  *** MAIN MACRO FOR EMSAVE EXTENSION NODE;
+15960  
+15961  %macro EM_SAVEXT_MAIN;
+15962  
+15963     %if %upcase("&EM_ACTION") = "CREATE" %then %do;
+15964         filename _create catalog 'sashelp.emutil.savext_create.source';
+15965         %include _create;
+15966         filename _create;
+15967         %EM_SAVEXT_CREATE;
+15968     %end;
+15969     %else
+15970     %if %upcase("&EM_ACTION") = "TRAIN" %then %do;
+15971         filename _train catalog 'sashelp.emutil.savext_train.source';
+15972         %include _train;
+15973         filename _train;
+15974         %EM_SAVEXT_TRAIN;
+15975     %end;
+15976  
+15977  %mend EM_SAVEXT_MAIN;
+15978  
+15979  %EM_SAVEXT_MAIN;
+15980  
+15981  *------------------------------------------------------------*;
+15982  * End SCORE: EMSave6;
+15983  *------------------------------------------------------------*;
+
+15984  *------------------------------------------------------------*;
+15985  * EMSave6: Scoring DATA data;
+15986  *------------------------------------------------------------*;
+15987  data EMWS1.EMSave6_TRAIN
+15988  / view=EMWS1.EMSave6_TRAIN
+15989  ;
+15990  set EMWS1.Prof8_TRAIN
+15991  ;
+15992  run;
+
+NOTE: DATA STEP view saved on file EMWS1.EMSAVE6_TRAIN.
+NOTE: A stored DATA STEP view cannot run under a different operating system.
+NOTE: View EMWS1.PROF8_TRAIN.VIEW used (Total process time):
+      real time           0.08 seconds
+      cpu time            0.06 seconds
+      
+NOTE: DATA statement used (Total process time):
+      real time           0.10 seconds
+      cpu time            0.09 seconds
+      
+
+15993  quit;
+
+15995  *------------------------------------------------------------*;
+15996  * EMSave6: Computing metadata for TRAIN data;
+15997  *------------------------------------------------------------*;
+
+NOTE: View EMWS1.EMSAVE6_TRAIN.VIEW used (Total process time):
+      real time           0.11 seconds
+      cpu time            0.11 seconds
+      
+NOTE: View EMWS1.EMSAVE6_TRAIN.VIEW used (Total process time):
+      real time           0.10 seconds
+      cpu time            0.09 seconds
+      

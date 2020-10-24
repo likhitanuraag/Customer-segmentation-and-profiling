@@ -1,0 +1,174 @@
+*------------------------------------------------------------*
+* Score Log
+Date:                September 28, 2020
+Time:                02:39:27
+*------------------------------------------------------------*
+16483  %let EMEXCEPTIONSTRING=;
+16484  *------------------------------------------------------------*;
+16485  * SCORE: Prof5;
+16486  *------------------------------------------------------------*;
+16487  %let EM_ACTION = SCORE;
+16488  %let syscc = 0;
+16489  %macro main;
+16490     %if %sysfunc(indexw(&EM_DEBUG, _ALL_)) or %sysfunc(indexw(&EM_DEBUG, SOURCE)) %then %do;
+16491         options MPRINT;
+16492     %end;
+16493  
+16494     filename temp catalog 'sashelp.emexpl.profile_macros.source';
+16495     %include temp;
+16496     filename temp;
+16497  
+16498     /* Initialize property macro variables */
+16499     %SetProperties;
+16500  
+16501     %if %upcase(&EM_ACTION) = CREATE %then %do;
+16502  
+16503         filename temp catalog 'sashelp.emexpl.profile_create.source';
+16504         %include temp;
+16505         filename temp;
+16506         %create;
+16507     %end;
+16508     %else
+16509     %if %upcase(&EM_ACTION) = TRAIN %then %do;
+16510  
+16511         filename temp catalog 'sashelp.emexpl.profile_train.source';
+16512         %include temp;
+16513         filename temp;
+16514         %train;
+16515     %end;
+16516  %mend main;
+16517  
+16518  %main;
+NOTE: %INCLUDE (level 1) file TEMP is file SASHELP.EMEXPL.PROFILE_MACROS.SOURCE.
+16519 +%macro SetProperties;
+16520 +   %em_checkmacro(name=EM_PROPERTY_PROFILEALL,         global=Y, value=N);
+16521 +   %em_checkmacro(name=EM_PROPERTY_USEREPORTVARS,      global=Y, value=Y);
+16522 +   %em_checkmacro(name=EM_PROPERTY_OTHERPERCENTCUTOFF, global=Y, value=95);
+16523 +   %em_checkmacro(name=EM_PROPERTY_TARGETROLE,         global=Y, value=NONE);
+16524 +   %em_checkmacro(name=EM_PROPERTY_NUMHISTBARS,        global=Y, value=8);
+16525 +   %em_checkmacro(name=EM_PROPERTY_MINWORTH,           global=Y, value=0.01);
+16526 +   %em_checkmacro(name=EM_PROPERTY_MAXDEPTH,           global=Y, value=1);
+16527 +   %em_checkmacro(name=EM_PROPERTY_MAXNUMREPORT,       global=Y, value=10);
+16528 +   %em_checkmacro(name=EM_PROPERTY_MAXNUMINPUT,        global=Y, value=10);
+16529 +   %em_checkmacro(name=EM_PROPERTY_PRINTWORTH,         global=Y, value=Y);
+16530 +%mend SetProperties;
+16531 +
+16532 +
+16533 +%macro makeVarMacros(level= );
+16534 +
+16535 +    %let numvars = 0;
+16536 +    %let where   = '';
+16537 +
+16538 +    %if (%upcase(&EM_PROPERTY_TARGETROLE) eq INPUT) %then
+16539 +        %let where = (ROLE = 'REJECTED' and LEVEL="&level" and USE='Y') or (ROLE in('INPUT', 'TARGET') and LEVEL="&level"  and USE in('Y', 'D'));
+16540 +    %else
+16541 +        %let where = (ROLE = 'REJECTED' and LEVEL="&level" and USE='Y') or (ROLE ='INPUT' and LEVEL="&level" and USE in('Y', 'D'));
+16542 +
+16543 +    %if &level = INTERVAL %then %do;
+16544 +        %let numvars = %eval( &EM_NUM_INTERVAL_INPUT + &EM_NUM_INTERVAL_REJECTED);
+16545 +        %if (%upcase(&EM_PROPERTY_TARGETROLE) eq INPUT) %then
+16546 +             %let numvars = %eval(&numvars + &EM_NUM_INTERVAL_TARGET);
+16547 +    %end;
+16548 +    %else %do;
+16549 +        %if &level = NOMINAL %then %do;
+16550 +            %let numvars = %eval(&EM_NUM_BINARY_INPUT + &EM_NUM_NOMINAL_INPUT +  &EM_NUM_BINARY_REJECTED + &EM_NUM_NOMINAL_REJECTED);
+16551 +             %if (%upcase(&EM_PROPERTY_TARGETROLE) eq INPUT) %then %do;
+16552 +                 %let numvars = %eval(&numvars + &EM_NUM_BINARY_TARGET + &EM_NUM_NOMINAL_TARGET);
+16553 +                 %let where = (ROLE = 'REJECTED' and LEVEL in('NOMINAL', 'BINARY') and USE='Y') or (ROLE in('INPUT', 'TARGET') and LEVEL in('NOMINAL', 'BINARY') and USE in('Y', 'D'));
+16554 +             %end;
+16555 +             %else
+16556 +                 %let where = (ROLE = 'REJECTED' and LEVEL in('NOMINAL', 'BINARY') and USE='Y') or (ROLE ='INPUT' and LEVEL in("NOMINAL", "BINARY") and USE in('Y', 'D'));
+16557 +
+16558 +        %end;
+16559 +        %else %do;
+16560 +            %let numvars = %eval(&EM_NUM_ORDINAL_INPUT + &EM_NUM_ORDINAL_REJECTED);
+16561 +            %if (%upcase(&EM_PROPERTY_TARGETROLE) eq INPUT) %then
+16562 +                %let numvars = %eval(&numvars + &EM_NUM_ORDINAL_TARGET);
+16563 +        %end;
+16564 +    %end;
+16565 +
+16566 +    %if &numvars>0 %then %do;
+16567 +         %let numloop = %sysfunc(ceil(&numvars/10000));
+16568 +         %let loopcount = 0;
+16569 +
+16570 +         %do %while((&numloop - &loopcount) > 0);
+16571 +             %let first = %eval((&loopcount*10000) + 1);
+16572 +             %let last  = %eval(&first + 10000);
+16573 +             %let loopcount = %eval(&loopcount +1);
+16574 +             %let centry = &EM_LIB..&EM_NODEID._MACS.&LEVEL._&loopcount..SOURCE;
+16575 +             filename X catalog "&centry";
+16576 +             data _null_;
+16577 +                length _STRING_ $80;
+16578 +                retain _STRING_ ;
+16579 +                file X;
+16580 +                set &EM_DATA_VARIABLESET(firstobs=&first obs=&last) end=eof;
+16581 +
+16582 +                where &where;
+16583 +
+16584 +                if _N_=1 then
+16585 +                   put '%macro _PROFVAR;';
+16586 +
+16587 +                if (length(_STRING_) + length(trim(NAME))+ 1  < 80) then do;
+16588 +                   _STRING_ = trim(_STRING_)!!' '!!trim(NAME);
+16589 +                   if eof then do;
+16590 +                      put _STRING_;
+16591 +                      put '%mend _PROFVAR;';
+16592 +                   end;
+16593 +                end;
+16594 +                else do;
+16595 +                   put _STRING_;
+16596 +                  _string_ = TRIM(NAME);
+16597 +                   if eof then do;
+16598 +                      put _string_;
+16599 +                      put '%mend _PROFVAR;';
+16600 +                   end;
+16601 +                end;
+16602 +             run;
+16603 +             filename X;
+16604 +         %end;
+16605 +    %end;
+16606 +
+16607 +%mend makeVarMacros;
+16608 +
+16609 +
+NOTE: %INCLUDE (level 1) ending.
+NOTE: Fileref TEMP has been deassigned.
+16610  *------------------------------------------------------------*;
+16611  * End SCORE: Prof5;
+16612  *------------------------------------------------------------*;
+
+16613  *------------------------------------------------------------*;
+16614  * Prof5: Scoring DATA data;
+16615  *------------------------------------------------------------*;
+16616  data EMWS1.Prof5_TRAIN
+16617  / view=EMWS1.Prof5_TRAIN
+16618  ;
+16619  set EMWS1.Clus5_TRAIN
+16620  ;
+16621  run;
+
+NOTE: DATA STEP view saved on file EMWS1.PROF5_TRAIN.
+NOTE: A stored DATA STEP view cannot run under a different operating system.
+NOTE: View EMWS1.CLUS5_TRAIN.VIEW used (Total process time):
+      real time           0.05 seconds
+      cpu time            0.04 seconds
+      
+NOTE: DATA statement used (Total process time):
+      real time           0.07 seconds
+      cpu time            0.07 seconds
+      
+
+16622  quit;
+
+16624  *------------------------------------------------------------*;
+16625  * Prof5: Computing metadata for TRAIN data;
+16626  *------------------------------------------------------------*;
+
+NOTE: View EMWS1.PROF5_TRAIN.VIEW used (Total process time):
+      real time           0.08 seconds
+      cpu time            0.06 seconds
+      
+NOTE: View EMWS1.PROF5_TRAIN.VIEW used (Total process time):
+      real time           0.08 seconds
+      cpu time            0.07 seconds
+      

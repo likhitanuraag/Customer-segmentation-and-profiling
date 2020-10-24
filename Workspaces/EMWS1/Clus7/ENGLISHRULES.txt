@@ -1,0 +1,174 @@
+*------------------------------------------------------------*
+ Node = 6
+*------------------------------------------------------------*
+if Marital_Statues IS ONE OF: DIVORCED
+AND Age < 70.5 or MISSING
+then 
+ Tree Node Identifier   = 6
+ Number of Observations = 4189
+ Predicted: _SEGMENT_=5  = 0.00
+ Predicted: _SEGMENT_=1  = 0.00
+ Predicted: _SEGMENT_=3  = 0.00
+ Predicted: _SEGMENT_=2  = 1.00
+ Predicted: _SEGMENT_=4  = 0.00
+ 
+*------------------------------------------------------------*
+ Node = 7
+*------------------------------------------------------------*
+if Marital_Statues IS ONE OF: DIVORCED
+AND Age >= 70.5
+then 
+ Tree Node Identifier   = 7
+ Number of Observations = 113
+ Predicted: _SEGMENT_=5  = 0.94
+ Predicted: _SEGMENT_=1  = 0.00
+ Predicted: _SEGMENT_=3  = 0.00
+ Predicted: _SEGMENT_=2  = 0.06
+ Predicted: _SEGMENT_=4  = 0.00
+ 
+*------------------------------------------------------------*
+ Node = 11
+*------------------------------------------------------------*
+if Marital_Statues IS ONE OF: SINGLE
+AND Age >= 50.5
+then 
+ Tree Node Identifier   = 11
+ Number of Observations = 335
+ Predicted: _SEGMENT_=5  = 1.00
+ Predicted: _SEGMENT_=1  = 0.00
+ Predicted: _SEGMENT_=3  = 0.00
+ Predicted: _SEGMENT_=2  = 0.00
+ Predicted: _SEGMENT_=4  = 0.00
+ 
+*------------------------------------------------------------*
+ Node = 16
+*------------------------------------------------------------*
+if Marital_Statues IS ONE OF: MARRIED or MISSING
+AND Age < 43.5 or MISSING
+then 
+ Tree Node Identifier   = 16
+ Number of Observations = 13770
+ Predicted: _SEGMENT_=5  = 0.00
+ Predicted: _SEGMENT_=1  = 1.00
+ Predicted: _SEGMENT_=3  = 0.00
+ Predicted: _SEGMENT_=2  = 0.00
+ Predicted: _SEGMENT_=4  = 0.00
+ 
+*------------------------------------------------------------*
+ Node = 19
+*------------------------------------------------------------*
+if Marital_Statues IS ONE OF: MARRIED or MISSING
+AND Age >= 45.5 or MISSING
+then 
+ Tree Node Identifier   = 19
+ Number of Observations = 8075
+ Predicted: _SEGMENT_=5  = 1.00
+ Predicted: _SEGMENT_=1  = 0.00
+ Predicted: _SEGMENT_=3  = 0.00
+ Predicted: _SEGMENT_=2  = 0.00
+ Predicted: _SEGMENT_=4  = 0.00
+ 
+*------------------------------------------------------------*
+ Node = 20
+*------------------------------------------------------------*
+if Marital_Statues IS ONE OF: SINGLE
+AND Age < 48.5 or MISSING
+then 
+ Tree Node Identifier   = 20
+ Number of Observations = 10289
+ Predicted: _SEGMENT_=5  = 0.00
+ Predicted: _SEGMENT_=1  = 0.00
+ Predicted: _SEGMENT_=3  = 1.00
+ Predicted: _SEGMENT_=2  = 0.00
+ Predicted: _SEGMENT_=4  = 0.00
+ 
+*------------------------------------------------------------*
+ Node = 26
+*------------------------------------------------------------*
+if Marital_Statues IS ONE OF: MARRIED or MISSING
+AND Education IS ONE OF: PRIMARY EDUCATION or MISSING
+AND Age < 44.5 AND Age >= 43.5
+then 
+ Tree Node Identifier   = 26
+ Number of Observations = 159
+ Predicted: _SEGMENT_=5  = 0.99
+ Predicted: _SEGMENT_=1  = 0.00
+ Predicted: _SEGMENT_=3  = 0.00
+ Predicted: _SEGMENT_=2  = 0.00
+ Predicted: _SEGMENT_=4  = 0.01
+ 
+*------------------------------------------------------------*
+ Node = 27
+*------------------------------------------------------------*
+if Marital_Statues IS ONE OF: MARRIED or MISSING
+AND Education IS ONE OF: SECONDARY EDUCATION, PROFESSIONAL EDUCATION, UNIVERSITY EDUCATION
+AND Age < 44.5 AND Age >= 43.5
+then 
+ Tree Node Identifier   = 27
+ Number of Observations = 479
+ Predicted: _SEGMENT_=5  = 0.00
+ Predicted: _SEGMENT_=1  = 1.00
+ Predicted: _SEGMENT_=3  = 0.00
+ Predicted: _SEGMENT_=2  = 0.00
+ Predicted: _SEGMENT_=4  = 0.00
+ 
+*------------------------------------------------------------*
+ Node = 28
+*------------------------------------------------------------*
+if Marital_Statues IS ONE OF: MARRIED or MISSING
+AND Education IS ONE OF: PRIMARY EDUCATION, PROFESSIONAL EDUCATION, UNIVERSITY EDUCATION
+AND Age < 45.5 AND Age >= 44.5
+then 
+ Tree Node Identifier   = 28
+ Number of Observations = 414
+ Predicted: _SEGMENT_=5  = 0.99
+ Predicted: _SEGMENT_=1  = 0.00
+ Predicted: _SEGMENT_=3  = 0.00
+ Predicted: _SEGMENT_=2  = 0.00
+ Predicted: _SEGMENT_=4  = 0.01
+ 
+*------------------------------------------------------------*
+ Node = 29
+*------------------------------------------------------------*
+if Marital_Statues IS ONE OF: MARRIED or MISSING
+AND Education IS ONE OF: SECONDARY EDUCATION or MISSING
+AND Age < 45.5 AND Age >= 44.5
+then 
+ Tree Node Identifier   = 29
+ Number of Observations = 286
+ Predicted: _SEGMENT_=5  = 0.06
+ Predicted: _SEGMENT_=1  = 0.94
+ Predicted: _SEGMENT_=3  = 0.00
+ Predicted: _SEGMENT_=2  = 0.00
+ Predicted: _SEGMENT_=4  = 0.00
+ 
+*------------------------------------------------------------*
+ Node = 32
+*------------------------------------------------------------*
+if Marital_Statues IS ONE OF: SINGLE
+AND Career IS ONE OF: HOUSEMAID, ADMINISTRATION, TECHNICIAN, MANAGEMENT, SELF-EMPLOYED
+AND Age < 50.5 AND Age >= 48.5
+then 
+ Tree Node Identifier   = 32
+ Number of Observations = 91
+ Predicted: _SEGMENT_=5  = 0.10
+ Predicted: _SEGMENT_=1  = 0.00
+ Predicted: _SEGMENT_=3  = 0.90
+ Predicted: _SEGMENT_=2  = 0.00
+ Predicted: _SEGMENT_=4  = 0.00
+ 
+*------------------------------------------------------------*
+ Node = 33
+*------------------------------------------------------------*
+if Marital_Statues IS ONE OF: SINGLE
+AND Career IS ONE OF: SERVICES, BLUE-COLLAR or MISSING
+AND Age < 50.5 AND Age >= 48.5
+then 
+ Tree Node Identifier   = 33
+ Number of Observations = 45
+ Predicted: _SEGMENT_=5  = 0.60
+ Predicted: _SEGMENT_=1  = 0.00
+ Predicted: _SEGMENT_=3  = 0.40
+ Predicted: _SEGMENT_=2  = 0.00
+ Predicted: _SEGMENT_=4  = 0.00
+ 

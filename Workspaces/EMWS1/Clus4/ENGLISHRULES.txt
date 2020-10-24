@@ -1,0 +1,69 @@
+*------------------------------------------------------------*
+ Node = 3
+*------------------------------------------------------------*
+if Number_of_Contacts >= 8.5
+then 
+ Tree Node Identifier   = 3
+ Number of Observations = 49
+ Predicted: _SEGMENT_=5  = 0.00
+ Predicted: _SEGMENT_=3  = 0.00
+ Predicted: _SEGMENT_=1  = 1.00
+ Predicted: _SEGMENT_=4  = 0.00
+ Predicted: _SEGMENT_=2  = 0.00
+ 
+*------------------------------------------------------------*
+ Node = 6
+*------------------------------------------------------------*
+if Number_of_Contacts < 3.5 or MISSING
+AND Contact_Type IS ONE OF: TELEPHONE
+then 
+ Tree Node Identifier   = 6
+ Number of Observations = 599
+ Predicted: _SEGMENT_=5  = 1.00
+ Predicted: _SEGMENT_=3  = 0.00
+ Predicted: _SEGMENT_=1  = 0.00
+ Predicted: _SEGMENT_=4  = 0.00
+ Predicted: _SEGMENT_=2  = 0.00
+ 
+*------------------------------------------------------------*
+ Node = 7
+*------------------------------------------------------------*
+if Number_of_Contacts < 8.5 AND Number_of_Contacts >= 3.5
+AND Contact_Type IS ONE OF: TELEPHONE
+then 
+ Tree Node Identifier   = 7
+ Number of Observations = 101
+ Predicted: _SEGMENT_=5  = 0.00
+ Predicted: _SEGMENT_=3  = 1.00
+ Predicted: _SEGMENT_=1  = 0.00
+ Predicted: _SEGMENT_=4  = 0.00
+ Predicted: _SEGMENT_=2  = 0.00
+ 
+*------------------------------------------------------------*
+ Node = 8
+*------------------------------------------------------------*
+if Number_of_Contacts < 3.5 or MISSING
+AND Contact_Type IS ONE OF: CELLULAR or MISSING
+then 
+ Tree Node Identifier   = 8
+ Number of Observations = 3145
+ Predicted: _SEGMENT_=5  = 0.00
+ Predicted: _SEGMENT_=3  = 0.00
+ Predicted: _SEGMENT_=1  = 0.00
+ Predicted: _SEGMENT_=4  = 1.00
+ Predicted: _SEGMENT_=2  = 0.00
+ 
+*------------------------------------------------------------*
+ Node = 9
+*------------------------------------------------------------*
+if Number_of_Contacts < 8.5 AND Number_of_Contacts >= 3.5
+AND Contact_Type IS ONE OF: CELLULAR or MISSING
+then 
+ Tree Node Identifier   = 9
+ Number of Observations = 364
+ Predicted: _SEGMENT_=5  = 0.00
+ Predicted: _SEGMENT_=3  = 0.00
+ Predicted: _SEGMENT_=1  = 0.00
+ Predicted: _SEGMENT_=4  = 0.00
+ Predicted: _SEGMENT_=2  = 1.00
+ 

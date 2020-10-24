@@ -1,0 +1,108 @@
+*------------------------------------------------------------*
+User:                20161277
+Date:                September 27, 2020
+Time:                13:39:00
+*------------------------------------------------------------*
+* Training Output
+*------------------------------------------------------------*
+ 
+ 
+ 
+ 
+Variable Summary
+ 
+            Measurement    Frequency
+Role           Level         Count
+ 
+ID           NOMINAL           1
+INPUT        INTERVAL          1
+INPUT        NOMINAL           3
+REJECTED     INTERVAL          2
+REJECTED     NOMINAL           5
+SEGMENT      NOMINAL           1
+TARGET       NOMINAL           1
+ 
+ 
+ 
+ 
+Frequencies: _SEGMENT_
+ 
+                                     Percent of
+ Segment     Segment    Frequency       Total
+Variable      Value       Count       Frequency
+ 
+_SEGMENT_       4          12168       35.8019
+_SEGMENT_       1           9086       26.7338
+_SEGMENT_       5           8917       26.2365
+_SEGMENT_       2           3802       11.1866
+_SEGMENT_       3             14        0.0412
+ 
+ 
+ 
+Variable: _SEGMENT_ Segment: 4 Count: 12168
+Decision Tree Importance Profiles
+ 
+Variable            Worth     Rank
+ 
+Marital_Statues    0.16430      1
+Age                0.14382      2
+Career             0.01515      3
+Education          0.00120      4
+ 
+ 
+ 
+Variable: _SEGMENT_ Segment: 1 Count: 9086
+Decision Tree Importance Profiles
+ 
+Variable            Worth     Rank
+ 
+Age                0.26674      1
+Marital_Statues    0.06948      2
+Career             0.03125      3
+Education          0.01883      4
+ 
+ 
+ 
+Variable: _SEGMENT_ Segment: 5 Count: 8917
+Decision Tree Importance Profiles
+ 
+Variable            Worth     Rank
+ 
+Marital_Statues    0.36528      1
+Age                0.08549      2
+Career             0.02724      3
+Education          0.01194      4
+ 
+ 
+ 
+Variable: _SEGMENT_ Segment: 2 Count: 3802
+Decision Tree Importance Profiles
+ 
+Variable            Worth     Rank
+ 
+Marital_Statues    0.19644      1
+Age                0.00541      2
+Career             0.00155      3
+Education          0.00027      4
+ 
+ 
+ 
+Variable: _SEGMENT_ Segment: 3 Count: 14
+Decision Tree Importance Profiles
+ 
+Variable                Worth    Rank
+ 
+Education          .000823505      1
+Age                .000001355      2
+Career             .000000481      3
+Marital_Statues    .000000085      4
+
+
+*------------------------------------------------------------*
+* Score Output
+*------------------------------------------------------------*
+
+
+*------------------------------------------------------------*
+* Report Output
+*------------------------------------------------------------*

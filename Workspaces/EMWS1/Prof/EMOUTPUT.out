@@ -1,0 +1,106 @@
+*------------------------------------------------------------*
+User:                20161277
+Date:                September 27, 2020
+Time:                17:46:27
+*------------------------------------------------------------*
+* Training Output
+*------------------------------------------------------------*
+ 
+ 
+ 
+ 
+Variable Summary
+ 
+            Measurement    Frequency
+Role           Level         Count
+ 
+ID           NOMINAL           1
+INPUT        INTERVAL          1
+INPUT        NOMINAL           3
+REJECTED     INTERVAL          2
+REJECTED     NOMINAL           5
+SEGMENT      NOMINAL           1
+TARGET       NOMINAL           1
+ 
+ 
+ 
+ 
+Frequencies: _SEGMENT_
+ 
+                                     Percent of
+ Segment     Segment    Frequency       Total
+Variable      Value       Count       Frequency
+ 
+_SEGMENT_       4           1986       46.6416
+_SEGMENT_       2           1443       33.8891
+_SEGMENT_       5            825       19.3753
+_SEGMENT_       3              3        0.0705
+_SEGMENT_       1              1        0.0235
+ 
+ 
+ 
+Variable: _SEGMENT_ Segment: 4 Count: 1986
+Decision Tree Importance Profiles
+ 
+Variable            Worth     Rank
+ 
+Marital_Statues    0.23512      1
+Age                0.16533      2
+Career             0.07150      3
+Education          0.00647      4
+ 
+ 
+ 
+Variable: _SEGMENT_ Segment: 2 Count: 1443
+Decision Tree Importance Profiles
+ 
+Variable            Worth     Rank
+ 
+Marital_Statues    0.43609      1
+Age                0.15456      2
+Career             0.06846      3
+Education          0.02118      4
+ 
+ 
+ 
+Variable: _SEGMENT_ Segment: 5 Count: 825
+Decision Tree Importance Profiles
+ 
+Variable            Worth     Rank
+ 
+Age                0.27313      1
+Career             0.13900      2
+Education          0.04517      3
+Marital_Statues    0.03854      4
+ 
+ 
+ 
+Variable: _SEGMENT_ Segment: 3 Count: 3
+Decision Tree Importance Profiles
+ 
+Variable                Worth    Rank
+ 
+Age                .000012031      1
+Career             .000007478      2
+Marital_Statues    .000000858      3
+ 
+ 
+ 
+Variable: _SEGMENT_ Segment: 1 Count: 1
+Decision Tree Importance Profiles
+ 
+Variable                Worth    Rank
+ 
+Age                .000027519      1
+Career             .000001094      2
+Marital_Statues    .000000090      3
+
+
+*------------------------------------------------------------*
+* Score Output
+*------------------------------------------------------------*
+
+
+*------------------------------------------------------------*
+* Report Output
+*------------------------------------------------------------*

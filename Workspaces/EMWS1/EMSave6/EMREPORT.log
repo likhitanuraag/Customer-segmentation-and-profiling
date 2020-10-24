@@ -1,0 +1,42 @@
+*------------------------------------------------------------*
+* Report Log
+Date:                September 27, 2020
+Time:                13:56:21
+*------------------------------------------------------------*
+16358  %let EMEXCEPTIONSTRING=;
+16359  *------------------------------------------------------------*;
+16360  * REPORT: EMSave6;
+16361  *------------------------------------------------------------*;
+16362  %let EM_ACTION = REPORT;
+16363  %let syscc = 0;
+16364  *** MAIN MACRO FOR EMSAVE EXTENSION NODE;
+16365  
+16366  %macro EM_SAVEXT_MAIN;
+16367  
+16368     %if %upcase("&EM_ACTION") = "CREATE" %then %do;
+16369         filename _create catalog 'sashelp.emutil.savext_create.source';
+16370         %include _create;
+16371         filename _create;
+16372         %EM_SAVEXT_CREATE;
+16373     %end;
+16374     %else
+16375     %if %upcase("&EM_ACTION") = "TRAIN" %then %do;
+16376         filename _train catalog 'sashelp.emutil.savext_train.source';
+16377         %include _train;
+16378         filename _train;
+16379         %EM_SAVEXT_TRAIN;
+16380     %end;
+16381  
+16382  %mend EM_SAVEXT_MAIN;
+16383  
+16384  %EM_SAVEXT_MAIN;
+16385  
+16386  *------------------------------------------------------------*;
+16387  * End REPORT: EMSave6;
+16388  *------------------------------------------------------------*;
+
+16389  /* Reset EM Options */
+16390  options formchar="|----|+|---+=|-/\<>*";
+16391  options nocenter ls=256 ps=10000;
+16392  goptions reset=all device=GIF NODISPLAY;
+

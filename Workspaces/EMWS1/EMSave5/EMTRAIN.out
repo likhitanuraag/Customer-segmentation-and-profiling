@@ -1,0 +1,25 @@
+ 
+                                                                                                                                                                                                                                                                
+ 
+ 
+Variable Summary
+
+            Measurement    Frequency
+Role           Level         Count
+
+ID           NOMINAL           1    
+INPUT        INTERVAL          1    
+INPUT        NOMINAL           3    
+REJECTED     INTERVAL          2    
+REJECTED     NOMINAL           5    
+SEGMENT      NOMINAL           1    
+TARGET       NOMINAL           1    
+ 
+                                                                                                                                                                                                                                                                
+ 
+Saved Data Properties
+
+                                                                                 Total           Saved        Number of
+                             Output Location                                  Observations    Observations    Variables
+
+C:\Users\20161277\Documents\CA assign 2 data\outputTask1\em_save_TRAIN.csv       38245            MAX             7    

@@ -1,0 +1,97 @@
+*------------------------------------------------------------*
+ Node = 3
+*------------------------------------------------------------*
+if Number_of_Contacts >= 21.5
+then 
+ Tree Node Identifier   = 3
+ Number of Observations = 128
+ Predicted: _SEGMENT_=5  = 0.00
+ Predicted: _SEGMENT_=3  = 0.00
+ Predicted: _SEGMENT_=4  = 0.06
+ Predicted: _SEGMENT_=2  = 0.94
+ Predicted: _SEGMENT_=1  = 0.00
+ 
+*------------------------------------------------------------*
+ Node = 8
+*------------------------------------------------------------*
+if Number_of_Contacts < 6.5 or MISSING
+AND Contact_Type IS ONE OF: TELEPHONE
+then 
+ Tree Node Identifier   = 8
+ Number of Observations = 12049
+ Predicted: _SEGMENT_=5  = 1.00
+ Predicted: _SEGMENT_=3  = 0.00
+ Predicted: _SEGMENT_=4  = 0.00
+ Predicted: _SEGMENT_=2  = 0.00
+ Predicted: _SEGMENT_=1  = 0.00
+ 
+*------------------------------------------------------------*
+ Node = 11
+*------------------------------------------------------------*
+if Number_of_Contacts < 21.5 AND Number_of_Contacts >= 12.5
+AND Contact_Type IS ONE OF: CELLULAR or MISSING
+then 
+ Tree Node Identifier   = 11
+ Number of Observations = 168
+ Predicted: _SEGMENT_=5  = 0.00
+ Predicted: _SEGMENT_=3  = 0.00
+ Predicted: _SEGMENT_=4  = 1.00
+ Predicted: _SEGMENT_=2  = 0.00
+ Predicted: _SEGMENT_=1  = 0.00
+ 
+*------------------------------------------------------------*
+ Node = 12
+*------------------------------------------------------------*
+if Number_of_Contacts < 10.5 AND Number_of_Contacts >= 6.5 or MISSING
+AND Contact_Type IS ONE OF: TELEPHONE
+then 
+ Tree Node Identifier   = 12
+ Number of Observations = 615
+ Predicted: _SEGMENT_=5  = 0.00
+ Predicted: _SEGMENT_=3  = 1.00
+ Predicted: _SEGMENT_=4  = 0.00
+ Predicted: _SEGMENT_=2  = 0.00
+ Predicted: _SEGMENT_=1  = 0.00
+ 
+*------------------------------------------------------------*
+ Node = 13
+*------------------------------------------------------------*
+if Number_of_Contacts < 21.5 AND Number_of_Contacts >= 10.5
+AND Contact_Type IS ONE OF: TELEPHONE
+then 
+ Tree Node Identifier   = 13
+ Number of Observations = 344
+ Predicted: _SEGMENT_=5  = 0.00
+ Predicted: _SEGMENT_=3  = 0.08
+ Predicted: _SEGMENT_=4  = 0.92
+ Predicted: _SEGMENT_=2  = 0.00
+ Predicted: _SEGMENT_=1  = 0.00
+ 
+*------------------------------------------------------------*
+ Node = 14
+*------------------------------------------------------------*
+if Number_of_Contacts < 5.5 or MISSING
+AND Contact_Type IS ONE OF: CELLULAR or MISSING
+then 
+ Tree Node Identifier   = 14
+ Number of Observations = 19326
+ Predicted: _SEGMENT_=5  = 0.00
+ Predicted: _SEGMENT_=3  = 0.00
+ Predicted: _SEGMENT_=4  = 0.00
+ Predicted: _SEGMENT_=2  = 0.00
+ Predicted: _SEGMENT_=1  = 1.00
+ 
+*------------------------------------------------------------*
+ Node = 15
+*------------------------------------------------------------*
+if Number_of_Contacts < 12.5 AND Number_of_Contacts >= 5.5
+AND Contact_Type IS ONE OF: CELLULAR or MISSING
+then 
+ Tree Node Identifier   = 15
+ Number of Observations = 1357
+ Predicted: _SEGMENT_=5  = 0.00
+ Predicted: _SEGMENT_=3  = 1.00
+ Predicted: _SEGMENT_=4  = 0.00
+ Predicted: _SEGMENT_=2  = 0.00
+ Predicted: _SEGMENT_=1  = 0.00
+ 

@@ -1,0 +1,95 @@
+*------------------------------------------------------------*
+User:                20161277
+Date:                September 24, 2020
+Time:                11:17:19
+*------------------------------------------------------------*
+* Training Output
+*------------------------------------------------------------*
+ 
+ 
+ 
+ 
+Variable Summary
+ 
+            Measurement    Frequency
+Role           Level         Count
+ 
+ID           NOMINAL           1
+INPUT        INTERVAL          1
+INPUT        NOMINAL           3
+REJECTED     INTERVAL          1
+REJECTED     NOMINAL           4
+TARGET       NOMINAL           1
+ 
+ 
+ 
+ 
+ 
+The CONTENTS Procedure
+ 
+Data Set Name        EMWS1.FIMPORT2_DATA           Observations          38245
+Member Type          DATA                          Variables             11
+Engine               V9                            Indexes               0
+Created              09/24/2020 11:17:18           Observation Length    112
+Last Modified        09/24/2020 11:17:18           Deleted Observations  0
+Protection                                         Compressed            NO
+Data Set Type                                      Sorted                NO
+Label
+Data Representation  WINDOWS_64
+Encoding             wlatin1  Western (Windows)
+ 
+ 
+                                                   Engine/Host Dependent Information
+ 
+Data Set Page Size          65536
+Number of Data Set Pages    66
+First Data Page             1
+Max Obs per Page            584
+Obs in First Data Page      564
+Number of Data Set Repairs  0
+ExtendObsCounter            YES
+Filename                    C:\Users\20161277\Documents\CA assign 2 data\20161277_CAassignment2\Workspaces\EMWS1\fimport2_data.sas7bdat
+Release Created             9.0401M3
+Host Created                X64_DS08R2
+ 
+ 
+          Alphabetic List of Variables and Attributes
+ 
+ #    Variable              Type    Len    Format     Informat
+ 
+ 2    Age                   Num       8    BEST12.    BEST32.
+ 3    Career                Char     16    $16.       $16.
+ 8    Contact_Type          Char     11    $11.       $11.
+11    Cus_ID                Num       8    BEST12.    BEST32.
+ 5    Education             Char     24    $24.       $24.
+ 4    Marital_Statues       Char     10    $10.       $10.
+ 6    Mortage               Char      5    $5.        $5.
+ 9    Number_of_Contacts    Num       8    BEST12.    BEST32.
+ 7    Personal_Loan         Char      5    $5.        $5.
+10    Subscribed            Char      5    $5.        $5.
+ 1    VAR1                  Char      5    $5.        $5.
+
+
+*------------------------------------------------------------*
+* Score Output
+*------------------------------------------------------------*
+
+
+*------------------------------------------------------------*
+* Report Output
+*------------------------------------------------------------*
+ 
+ 
+ 
+ 
+Exported Attributes for TRAIN Port
+ 
+            Measurement    Frequency
+Role           Level         Count
+ 
+ID           NOMINAL           1
+INPUT        INTERVAL          1
+INPUT        NOMINAL           3
+REJECTED     INTERVAL          1
+REJECTED     NOMINAL           4
+TARGET       NOMINAL           1

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?><_ROOT_  WorkspaceName="EMWS1" UUID="9e3d2437-bffd-4bee-89b5-57843c1b874c" EMVersion="14.1"
+ ScoreCodeType="Data Step" MiningFunction="Segmentation" MiningAlgorithm="Cluster"
+ MiningAlgorithmNode="Clus5" NodeAlgorithm="Profile" NodeId="Prof5" NodeDescription="Segment Profile"
+ Time="28SEP2020:04:24:02" RawLastTimeRun="1916879953.2" LastTimeRun="28SEP2020:02:39:13"
+ Userid="20161277" NTarget="0" NSegment="1">
+<SEGMENTS >
+<SEGMENT  Variable="_SEGMENT_" Level="NOMINAL" Type="N" Format="" Order="DESC" NodeId="Clus5"
+/>
+</SEGMENTS>
+</_ROOT_>

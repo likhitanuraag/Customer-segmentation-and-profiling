@@ -1,0 +1,45 @@
+*------------------------------------------------------------*
+User:                20161277
+Date:                September 27, 2020
+Time:                13:38:45
+*------------------------------------------------------------*
+* Training Output
+*------------------------------------------------------------*
+ 
+ 
+ 
+ 
+Variable Summary
+ 
+            Measurement    Frequency
+Role           Level         Count
+ 
+ID           NOMINAL           1
+INPUT        INTERVAL          1
+INPUT        NOMINAL           3
+REJECTED     INTERVAL          1
+REJECTED     NOMINAL           4
+
+
+*------------------------------------------------------------*
+* Score Output
+*------------------------------------------------------------*
+
+
+*------------------------------------------------------------*
+* Report Output
+*------------------------------------------------------------*
+ 
+ 
+ 
+ 
+Variable Importance
+ 
+                            Number of    Number of
+                            Splitting    Surrogate
+Variable Name      Label      Rules        Rules      Importance
+ 
+Age                             3            1          1.00000
+Career                          1            6          0.97282
+Marital_Statues                 2            0          0.84558
+Education                       1            0          0.16283
